@@ -5,7 +5,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <img [src]="selectedRecipe.imagePath" style="height: 500px;" />
+    <img [src]="selectedRecipe.imagePath" style="height: 400px;" />
     <h1>{{ selectedRecipe.name }}</h1>
   </div>
 </div>
@@ -18,12 +18,15 @@
       </button>
       <ul class="dropdown-menu">
         <li>
-          <a (click)="onAddToShoppingList()" style="cursor: pointer;"
+          <a
+            routerLink="/shopping-list"
+            (click)="onAddToShoppingList()"
+            style="cursor: pointer;"
             >To Shopping List</a
           >
         </li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
+        <li><a style="cursor: pointer;">Edit Recipe</a></li>
+        <li><a style="cursor: pointer;">Delete Recipe</a></li>
       </ul>
     </div>
   </div>

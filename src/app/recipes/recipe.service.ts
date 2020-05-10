@@ -14,7 +14,7 @@ export class RecipeService {
       'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2015/11/shakshuka-11.jpg',
       [
         { name: 'Cheese', amount: 1 },
-        { name: 'Oregano', amount: 0.5 }
+        { name: 'Oregano', amount: 0.5 },
       ]
     ),
     new Recipe(
@@ -24,15 +24,19 @@ export class RecipeService {
       [
         { name: 'Kiwi', amount: 2 },
         { name: 'Grapefruit', amount: 0.5 },
-        { name: 'Peach', amount: 1 }
+        { name: 'Peach', amount: 1 },
       ]
-    )
+    ),
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}
 
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(id: number) {
+    return this.recipes[id];
   }
 
   addIngredientsToShoppingList(ing: Ingredient[]) {
